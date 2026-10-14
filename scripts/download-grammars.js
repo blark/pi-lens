@@ -66,10 +66,10 @@ export const VENDORED_GRAMMARS = {
         // grammar is not published yet; publishing it would make this recipe
         // reproducible by anyone, with no other change.
         repo: "local checkout: ~/src/tree-sitter-6809-lwasm (grammar not yet published)",
-        commit: "4c32d195ce8a1b62ec5cdba49e0c76e0571c571a",
+        commit: "9ff7078fcc87b61efc69b881376f50a32633baf8",
         license: "MIT",
         buildCommand: "nix develop -c tree-sitter build --wasm",
-        sha256: "sha256:d66886c197595d8ab5a784ff8c48f280120d0f29b478459ead79fa0a12dae5cb",
+        sha256: "sha256:a3f0c33f9211e65448a9405256a51fe239c8b5776d12941102d940a50dc3feec",
     },
 };
 /** Directory the committed grammars live in, relative to the package root. */
