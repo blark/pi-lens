@@ -50,6 +50,7 @@ Dispatch is diagnostics-oriented: automatic formatting and safe autofix happen i
 | TOML                  | ✓   | lsp, taplo                                                                                                     | taplo                   |
 | CMake                 | ✓ (cmake-language-server) | lsp                                                                                      | cmake-format            |
 | CUE                   | ✓ (syntax via cue lsp, evaluation via cue vet) | lsp, cue-vet                                                              | cue fmt                 |
+| lwasm6809 (6809/HD6309 asm) | —   | tree-sitter                                                                                                     | —                       |
 
 ### CUE tree-sitter grammar
 
