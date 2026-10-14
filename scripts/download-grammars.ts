@@ -94,6 +94,20 @@ export const VENDORED_GRAMMARS: Record<string, VendoredGrammar> = {
 		sha256:
 			"sha256:751f8cc8ccf72da760133e3d365562ff7bbf5b951e0b73568576fd159db7d601",
 	},
+	"tree-sitter-lwasm6809.wasm": {
+		// The lwasm dialect of 6809/HD6309 has no published wasm -- the aggregator has
+		// no assembly grammar at all -- so the artifact is built from a local checkout
+		// and committed. `repo` names that checkout rather than a URL because the
+		// grammar is not published yet; publishing it would make this recipe
+		// reproducible by anyone, with no other change.
+		repo: "local checkout: ~/src/tree-sitter-6809-lwasm (grammar not yet published)",
+		commit: "4c32d195ce8a1b62ec5cdba49e0c76e0571c571a",
+		license: "MIT",
+		buildCommand: "nix develop -c tree-sitter build --wasm",
+		sha256:
+			"sha256:d66886c197595d8ab5a784ff8c48f280120d0f29b478459ead79fa0a12dae5cb",
+	},
+
 };
 
 /** Directory the committed grammars live in, relative to the package root. */

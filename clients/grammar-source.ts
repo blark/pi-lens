@@ -115,6 +115,18 @@ export const VENDORED_GRAMMARS: Record<string, VendoredGrammarSource> = {
 		license: "MIT",
 		buildCommand: "npx tree-sitter-cli build --wasm",
 	},
+	"tree-sitter-lwasm6809.wasm": {
+		// The lwasm dialect of 6809/HD6309 has no published wasm -- the aggregator has
+		// no assembly grammar at all -- so the artifact is built from a local checkout
+		// and committed. `repo` names that checkout rather than a URL because the
+		// grammar is not published yet; publishing it would make this recipe
+		// reproducible by anyone, with no other change.
+		repo: "local checkout: ~/src/tree-sitter-6809-lwasm (grammar not yet published)",
+		commit: "4c32d195ce8a1b62ec5cdba49e0c76e0571c571a",
+		license: "MIT",
+		buildCommand: "nix develop -c tree-sitter build --wasm",
+	},
+
 };
 
 /** Is `filename` built in-house rather than fetched from a CDN? */
@@ -167,6 +179,7 @@ export const LANGUAGE_TO_GRAMMAR: Record<string, string> = {
 	go: "tree-sitter-go.wasm",
 	java: "tree-sitter-java.wasm",
 	kotlin: "tree-sitter-kotlin.wasm",
+	lwasm6809: "tree-sitter-lwasm6809.wasm",
 	dart: "tree-sitter-dart.wasm",
 	c: "tree-sitter-c.wasm",
 	cpp: "tree-sitter-cpp.wasm",

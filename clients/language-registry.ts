@@ -70,6 +70,7 @@ export type LanguageId =
 	| "lean"
 	| "less"
 	| "lua"
+	| "lwasm6809"
 	| "markdown"
 	| "nix"
 	| "ocaml"
@@ -157,6 +158,7 @@ export const PINNED_LANGUAGE_IDS = [
 	"lean",
 	"less",
 	"lua",
+	"lwasm6809",
 	"markdown",
 	"nix",
 	"ocaml",
@@ -393,6 +395,15 @@ export const LANGUAGES: readonly LanguageEntry[] = [
 	{ id: "lean", kind: "lean", extensions: [".lean"] },
 	{ id: "less", kind: "css", extensions: [".less"] },
 	{ id: "lua", kind: "lua", extensions: [".lua"], grammar: "lua" },
+	{
+		id: "lwasm6809",
+		extensions: [".s", ".asm", ".inc"],
+		grammar: "lwasm6809",
+		// `.inc` belongs here because that is what lwasm `include` files use;
+		// leaving it out of a consumer's extension list silently skips them.
+		// No `kind`: the coarse FileKind table has no assembly kind, and every
+		// kind-keyed consumer keys off a kind this language does not need.
+	},
 	{ id: "markdown", kind: "markdown", extensions: [".md", ".mdx"] },
 	{ id: "nix", kind: "nix", extensions: [".nix"] },
 	{
