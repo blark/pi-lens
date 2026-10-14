@@ -1,0 +1,34 @@
+# Text after the operand is silently discarded by lwasm in classic mode.
+id: ignored-trailing-text
+name: Text after the operand is ignored
+severity: error
+category: correctness
+defect_class: correctness
+inline_tier: warning
+language: lwasm6809
+
+message: "lwasm ignores everything after the operand, so this line does not assemble the way it reads"
+
+description: |
+  In lwasm's classic mode the operand is the first whitespace-delimited token and
+  EVERYTHING after it is ignored, with the comment character optional. So
+
+      lda 5 , x        ; operand is "5", ", x" is thrown away -> DIRECT PAGE LDA
+      lda 5,x          ; indexed LDA
+
+  assemble to different instructions. `lda 5 , x` emits `96 05` (direct page)
+  while `lda 5,x` emits `A6 05` (indexed). The space is not cosmetic.
+
+  Under `pragma newsource` the same text is an error instead, which is the one
+  behavioural difference that pragma makes.
+
+query: |
+  (statement
+    (ignored) @IGN)
+
+metavars:
+  - IGN
+
+tags:
+  - correctness
+  - assembly

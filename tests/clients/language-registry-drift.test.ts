@@ -60,6 +60,7 @@ import { getSymbolQueryLanguages } from "../../clients/tree-sitter-symbol-extrac
 const KIND_GAPS = [
 	".adb",
 	".ads",
+	".asm",
 	".astro",
 	".cbl",
 	".cob",
@@ -70,6 +71,7 @@ const KIND_GAPS = [
 	".gql",
 	".graphql",
 	".hrl",
+	".inc",
 	".jl",
 	".mod",
 	".pas",
@@ -83,6 +85,7 @@ const KIND_GAPS = [
 	".proto",
 	".r",
 	".ron",
+	".s",
 	".sc",
 	".scala",
 	".sum",

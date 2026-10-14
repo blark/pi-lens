@@ -16,6 +16,7 @@
 		"json",
 		"kotlin",
 		"lua",
+		"lwasm6809",
 		"ocaml",
 		"php",
 		"python",
@@ -47,6 +48,16 @@
 			"treeSitterGrammar": null,
 			"scannerGrammar": null,
 			"readExpansionLang": null,
+			"reviewGraphGrammar": null,
+			"moduleReportGrammar": null
+		},
+		".asm": {
+			"kind": null,
+			"kindLanguageId": null,
+			"lspId": "lwasm6809",
+			"treeSitterGrammar": "lwasm6809",
+			"scannerGrammar": "lwasm6809",
+			"readExpansionLang": "lwasm6809",
 			"reviewGraphGrammar": null,
 			"moduleReportGrammar": null
 		},
@@ -580,6 +591,16 @@
 			"reviewGraphGrammar": "cpp",
 			"moduleReportGrammar": "cpp"
 		},
+		".inc": {
+			"kind": null,
+			"kindLanguageId": null,
+			"lspId": "lwasm6809",
+			"treeSitterGrammar": "lwasm6809",
+			"scannerGrammar": "lwasm6809",
+			"readExpansionLang": "lwasm6809",
+			"reviewGraphGrammar": null,
+			"moduleReportGrammar": null
+		},
 		".inl": {
 			"kind": "cxx",
 			"kindLanguageId": "cpp",
@@ -1059,6 +1080,16 @@
 			"readExpansionLang": null,
 			"reviewGraphGrammar": "ruby",
 			"moduleReportGrammar": "ruby"
+		},
+		".s": {
+			"kind": null,
+			"kindLanguageId": null,
+			"lspId": "lwasm6809",
+			"treeSitterGrammar": "lwasm6809",
+			"scannerGrammar": "lwasm6809",
+			"readExpansionLang": "lwasm6809",
+			"reviewGraphGrammar": null,
+			"moduleReportGrammar": null
 		},
 		".sass": {
 			"kind": "css",
