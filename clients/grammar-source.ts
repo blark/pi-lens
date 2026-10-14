@@ -122,7 +122,7 @@ export const VENDORED_GRAMMARS: Record<string, VendoredGrammarSource> = {
 		// grammar is not published yet; publishing it would make this recipe
 		// reproducible by anyone, with no other change.
 		repo: "local checkout: ~/src/tree-sitter-6809-lwasm (grammar not yet published)",
-		commit: "9ff7078fcc87b61efc69b881376f50a32633baf8",
+		commit: "3c762cf04b1d5dc13c6b35190a67681e21062812",
 		license: "MIT",
 		buildCommand: "nix develop -c tree-sitter build --wasm",
 	},

@@ -66,7 +66,7 @@ export const VENDORED_GRAMMARS = {
         // grammar is not published yet; publishing it would make this recipe
         // reproducible by anyone, with no other change.
         repo: "local checkout: ~/src/tree-sitter-6809-lwasm (grammar not yet published)",
-        commit: "9ff7078fcc87b61efc69b881376f50a32633baf8",
+        commit: "3c762cf04b1d5dc13c6b35190a67681e21062812",
         license: "MIT",
         buildCommand: "nix develop -c tree-sitter build --wasm",
         sha256: "sha256:a3f0c33f9211e65448a9405256a51fe239c8b5776d12941102d940a50dc3feec",
